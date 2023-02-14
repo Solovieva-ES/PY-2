@@ -85,8 +85,8 @@ class Sofa:
 
                    :param sofa_colors: Цвет дивана
 
-                   >>>my_sofa = Sofa( 50 , 60 , "red", "triangle")
-                   >>>my_sofa.colors_sofa("white") """
+                   >>> my_sofa = Sofa( 50 , 60 , "red", "triangle")
+                   >>> my_sofa.colors_sofa("white") """
 
         self.color = sofa_colors
 
