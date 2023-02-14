@@ -19,11 +19,12 @@ class Book:
         return self._author
 
 
-book = Book("Букварь", "")  # внутри класса обращаемся к защищенному атрибуту
-print(book.name)  # вызов getter свойства
+if __name__ == "__main__":
+    book = Book("Букварь", "")  # внутри класса обращаемся к защищенному атрибуту
+    print(book.name)  # вызов getter свойства
 
-book = Book("", "Пушкин")
-print(book.author)
+    book = Book("", "Пушкин")
+    print(book.author)
 
 
 class PaperBook(Book):
@@ -46,14 +47,12 @@ class PaperBook(Book):
         self._pages = new_pages
 
 
-book = PaperBook("", "", 500)
-print(book.pages)  # вызываем как атрибут, но срабатывает метод
-book.pages = 700  # присваиваем значение атрибуту, но срабатывает метод
-print(book.pages)
+if __name__ == "__main__":
+    book = PaperBook("", "", 500)
+    print(book.pages)  # вызываем как атрибут, но срабатывает метод
+    book.pages = 700  # присваиваем значение атрибуту, но срабатывает метод
+    print(book.pages)
 
-
-# def __repr__(self) -> str:
-# return f'{self.__class__.__name__}({self.name!r}, {self.author!r}, {self.pages!r})'
 
 class AudioBook(Book):
 
@@ -76,10 +75,8 @@ class AudioBook(Book):
         self._duration = new_duration
 
 
-book = AudioBook("", "", 1200)
-print(book.duration)  # вызываем как атрибут, но срабатывает метод
-book.duration = 1000  # присваиваем значение атрибуту, но срабатывает метод
-print(book.duration)
-
-# def __repr__(self) -> str:
-# return f'{self.__class__.__name__}({self.name!r}, {self.author!r}, {self.duration!r})'
+if __name__ == "__main__":
+    book = AudioBook("", "", 1200)
+    print(book.duration)  # вызываем как атрибут, но срабатывает метод
+    book.duration = 1000  # присваиваем значение атрибуту, но срабатывает метод
+    print(book.duration)
